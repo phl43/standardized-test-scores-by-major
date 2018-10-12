@@ -2,7 +2,7 @@ library(tidyverse)
 library(sjlabelled)
 library(stats)
 
-# load the data about incoming Freshmen's standardized test scores and intended major
+# load the data about incoming freshmen's standardized test scores and intended major
 # from the Freshmen Survey for the years between 2000 and 2006 (this is a file I created
 # from the data available on HERI's website: https://heri.ucla.edu/cirp-freshman-survey/)
 tfs <- read_rds("test_scores_by_major.rds")
@@ -71,7 +71,7 @@ ggplot(data = test_scores_by_major, mapping = aes(x = reorder(MAJOR, -(SATM + SA
             size = 3,
             angle = 90) +
   theme_bw() +
-  ggtitle("Mean score on the verbal part of the SAT by major") +
+  ggtitle("Mean SAT score by major") +
   xlab("Major") +
   ylab("Mean SAT score") +
   theme(plot.title = element_text(hjust = 0.5)) +
